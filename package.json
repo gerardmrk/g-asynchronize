@@ -28,8 +28,10 @@
     "node": ">=4.2.0"
   },
   "devDependencies": {
-    "babel": "^5.8.29",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "babel": "^5.8.29"
   }
 }
