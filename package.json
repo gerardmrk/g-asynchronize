@@ -1,0 +1,35 @@
+{
+  "name": "g-asynchronize",
+  "version": "0.2.7",
+  "description": "Personal utility function to enable asynchronous control-flow with better code readability by wrapping a passed in generator function and conditionally transforming its yielded values to native Promises.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node ./tests | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gerardmrk/g-asynchronize.git"
+  },
+  "keywords": [
+    "asynchronous",
+    "generator",
+    "promise"
+  ],
+  "author": "Gerard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerardmrk/g-asynchronize/issues"
+  },
+  "homepage": "https://github.com/gerardmrk/g-asynchronize#readme",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
+  }
+}
