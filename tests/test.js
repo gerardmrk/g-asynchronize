@@ -12,7 +12,7 @@ const {
   isFunction,
   isObject,
   isArray
-} = require('../index');
+} = require('../lib/index');
 
 const genFn = function* () { yield 1; yield 2; };
 const genObj = genFn();

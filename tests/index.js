@@ -1,5 +1,5 @@
 'use strict';
 
-require('babel/register')({ stage: 0 });
+require('babel/register');
 
-require('./test');
+module.exports = require('./test');

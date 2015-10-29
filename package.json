@@ -1,10 +1,11 @@
 {
   "name": "g-asynchronize",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "Personal utility function to enable asynchronous control-flow with better code readability by wrapping a passed in generator function and conditionally transforming its yielded values to native Promises.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node ./tests | tap-spec",
+    "prepublish": "./node_modules/.bin/babel -d lib src/",
     "build": "webpack --config webpack.js"
   },
   "repository": {
