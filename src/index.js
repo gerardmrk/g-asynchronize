@@ -73,7 +73,7 @@ function run(generator) {
       );
     }
 
-    // [INFO] Standard callback for handling Promise fulfillment.
+    // [INFO] If success, call iterator's 'next' and pass in the value.
     function onSuccess(val) {
       let nextObject;
       try {
@@ -84,7 +84,7 @@ function run(generator) {
       iterate(nextObject);
     }
 
-    // [INFO] Standard callback for handling Promise error.
+    // [INFO] If failure, throw error into the generator's iterator.
     function onFailure(error) {
       let nextObject;
       try {
@@ -204,6 +204,5 @@ export {
   isFunction,
   isObject,
   isArray,
-  run,
-  asynchronize
+  run
 };
