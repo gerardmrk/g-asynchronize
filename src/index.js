@@ -2,7 +2,7 @@
 
 /* [INFO] Allow asynchronous control-flow within the given generator, by
  * wrapping it in a function that returns a Promise for anything it yields. */
-export default function asynchronize(generator) {
+function asynchronize(generator) {
   return function() {
     return run.call(this, generator.apply(this, arguments));
   }
@@ -192,17 +192,19 @@ function isArray(val) {
   return Array.isArray(val);
 }
 
-export {
-  promisifiers,
-  promisify,
-  promisifyObject,
-  promisifyThunk,
-  promisifyArray,
-  isPromise,
-  isGeneratorFunction,
-  isGeneratorObject,
-  isFunction,
-  isObject,
-  isArray,
-  run
-};
+// export {
+//   promisifiers,
+//   promisify,
+//   promisifyObject,
+//   promisifyThunk,
+//   promisifyArray,
+//   isPromise,
+//   isGeneratorFunction,
+//   isGeneratorObject,
+//   isFunction,
+//   isObject,
+//   isArray,
+//   run
+// };
+
+export default asynchronize;
